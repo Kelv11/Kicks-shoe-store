@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - KICKS SHOE STORE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/logo2.png" width="200px">
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="products.html">PRODUCTS</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="Accounts.html">ACCOUNT</a></li>
+                </ul>
+            </nav>
+            <a href="CART.html"><img src="images/cart.png" width="30px" height="30px"></a>
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+    </div>
+
+    <div class="small-container single-product">
+        <div class="row">
+            <div class="col-2">
+               <img id="product-image" src="images/whatsapp5.jpg" width="100%"> 
+            </div>
+            <div class="col-2">
+                <p>Home / <span id="product-category">sneakers</span></p>
+                <h1 id="product-name">Airmax 97</h1>
+                <h4 id="product-price">Ksh 4500</h4>
+                <select id="product-size">
+                    <option>Select size</option>
+                    <option>41</option>
+                    <option>42</option>
+                    <option>43</option>
+                    <option>44</option>
+                </select>
+                <input type="number" value="1" id="product-quantity">
+                <a href="#" class="btn" id="add-to-cart-btn">Add to Cart</a>
+                <h3>Product Details</h3>
+                <br>
+                <p id="product-description">Elevate your style with the timeless Airforce 1 White, a perfect blend of classic design and modern comfort. Ideal for any occasion.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <img src="images/logo2.png">
+                    <p>Step up your shoe game at KICKS!!!</p>
+                </div>
+                <div class="footer-col-2">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">© 2024 KICKS STORE</p>
+        </div>
+    </div>
+
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle(){
+            if(MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px"; 
+            } else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+
+        // JavaScript to dynamically change product details based on URL
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const productID = urlParams.get('product');
+
+            const products = {
+                'airforce1white': {
+                    name: 'Airforce 1 White',
+                    price: 'KSH 2800',
+                    image: 'images/whatsapp5.jpg',
+                    description: 'Elevate your style with the timeless Airforce 1 White, a perfect blend of classic design and modern comfort. Ideal for any occasion.'
+                },
+                'airforce1black': {
+                    name: 'Airforce 1 Black',
+                    price: 'KSH 2800',
+                    image: 'images/whatsapp4.jpg',
+                    description: 'The Airforce 1 Black offers a sleek and versatile look, ensuring you stand out with every step.'
+                },
+                'airjordan1': {
+                    name: 'Air Jordan 1',
+                    price: 'KSH 3800',
+                    image: 'images/whatsapp3.jpg',
+                    description: 'Classic Air Jordan 1 sneakers, renowned for their unbeatable style and unmatched comfort.'
+                },
+                'jordan1low': {
+                    name: 'Jordan 1 Low',
+                    price: 'KSH 4000',
+                    image: 'images/whatsapp2.jpg',
+                    description: 'A fresh take on the classic, the Jordan 1 Low is perfect for a casual day out or a night on the town.'
+                },
+                // Add more products as needed
+                'Newbalance': {
+                    name: 'New balance',
+                    price: 'KSH 4500',
+                    image: 'images/whatsapp6.jpg',
+                    description: 'Elevate your style with the timeless New balance, a perfect blend of classic design and modern comfort. Ideal for any occasion.'
+                },
+                'Airjordan1xtravisscott': {
+                    name: 'Air jordan1 x travis scott',
+                    price: 'KSH 4000',
+                    image: 'images/whatsapp1.jpg',
+                    description: 'Elevate your style with the timeless Air jorda1 x travis scott, a perfect blend of classic design and modern comfort. Ideal for any occasion.'
+                },
+                'Airmax97': {
+                    name: 'Airmax97',
+                    price: 'KSH 4500',
+                    image: 'images/whatsapp7.jpg',
+                    description: 'Elevate your style with the timeless Airmax97, a perfect blend of classic design and modern comfort. Ideal for any occasion.'
+                },
+                'Newbalance': {
+                    name: 'New balance',
+                    price: 'KSH 4500',
+                    image: 'images/whatsapp8.jpg',
+                    description: 'Elevate your style with the timeless New balance, a perfect blend of classic design and modern comfort. Ideal for any occasion.'
+                },
+                'AirmaxTN': {
+                    name: 'AirmaxTN',
+                    price: 'KSH 4500',
+                    image: 'images/whatsapp9.jpg',
+                    description: 'Elevate your style with the timeless AirmaxTN, a perfect blend of classic design and modern comfort. Ideal for any occasion.'
+                },
+                'AirmaxDN': {
+                    name: 'AirmaxDN',
+                    price: 'KSH 4000',
+                    image: 'images/whatsapp10.jpg',
+                    description: 'Elevate your style with the timeless AirmaxDN, a perfect blend of classic design and modern comfort. Ideal for any occasion.'
+                },
+                'SBdunklow': {
+                    name: 'SB dunk low',
+                    price: 'KSH 3000',
+                    image: 'images/whatsapp11.jpg',
+                    description: 'Elevate your style with the timeless SB dunk low, a perfect blend of classic design and modern comfort. Ideal for any occasion.'
+                },
+                'Nikemules': {
+                    name: 'Nike mules',
+                    price: 'KSH 2200',
+                    image: 'images/whatsapp12.jpg',
+                    description: 'Elevate your style with the timeless Nike mules, a perfect blend of classic design and modern comfort. Ideal for any occasion.'
+                },
+            };
+
+            if (products[productID]) {
+                document.getElementById('product-name').innerText = products[productID].name;
+                document.getElementById('product-price').innerText = products[productID].price;
+                document.getElementById('product-image').src = products[productID].image;
+                document.getElementById('product-description').innerText = products[productID].description;
+                document.getElementById('product-category').innerText = "Sneakers"; // Example category, change as needed
+            } else {
+                document.getElementById('product-name').innerText = "Product Not Found";
+                document.getElementById('product-price').innerText = "";
+                document.getElementById('product-image').src = "";
+                document.getElementById('product-description').innerText = "The product you're looking for doesn't exist.";
+            }
+        }
+
+        document.getElementById('add-to-cart-btn').addEventListener('click', function() {
+        const productName = document.getElementById('product-name').innerText;
+        const productPrice = document.getElementById('product-price').innerText;
+        const productSize = document.getElementById('product-size').value;
+        const productQuantity = parseInt(document.getElementById('product-quantity').value, 10);
+
+        if (productSize === "Select size") {
+            alert("Please select a size.");
+            return;
+        }
+
+        // Create a product object
+        const cartItem = {
+            name: productName,
+            price: productPrice,
+            size: productSize,
+            quantity: productQuantity,
+            image: document.getElementById('product-image').src
+        };
+
+        // Retrieve the current cart from local storage or initialize it
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Check if the item already exists in the cart
+        const existingItemIndex = cart.findIndex(item => item.name === cartItem.name && item.size === cartItem.size);
+
+        if (existingItemIndex > -1) {
+            // If it exists, update the quantity
+            cart[existingItemIndex].quantity += cartItem.quantity;
+        } else {
+            // Otherwise, add the new item to the cart
+            cart.push(cartItem);
+        }
+
+        // Save the updated cart to local storage
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+        alert("Product added to cart!");
+    });
+    </script>
+
+</body>
+</html>

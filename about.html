@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - KICKS SHOE STORE</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.html"><img src="images/logo2.png" width="100px" /></a>
+        </div>
+        <nav>
+          <ul id="MenuItems">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="products.html">PRODUCTS</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="Accounts.html">ACCOUNT</a></li>
+          </ul>
+        </nav>
+        <a href="CART.html"
+          ><img src="images/cart.png" width="30px" height="30px"
+        /></a>
+        <img src="images/menu.png" class="menu-icon" onclick="menutoggle()" />
+      </div>
+    </div>
+
+    <!-----------------------------About Us Page------------------>
+    <div class="about-page">
+      <div class="container">
+        <div class="row">
+          <div class="col-2">
+            <h1>Our Story</h1>
+            <p>
+              At KICKS, we believe that the right pair of shoes can transform
+              not only your outfit but also your outlook. Founded in 2024, our
+              mission is to bring you the latest in shoe fashion and trends.
+            </p>
+            <p>
+              Our journey began with a passion for footwear and a desire to
+              offer a curated selection of shoes that speak to every style and
+              need. We work with top designers and manufacturers to ensure every
+              pair is made with quality and care.
+            </p>
+          </div>
+          <div class="col-2">
+            <img src="images/category-1.jpg" alt="About Us" width="70%" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <img src="images/category-2.jpg" alt="Our Mission" width="70%" />
+          </div>
+          <div class="col-2">
+            <h1>Our Mission</h1>
+            <p>
+              Our mission is to empower you through fashion-forward footwear.
+              Whether you're looking for the latest sneakers, classic loafers,
+              or high-fashion heels, KICKS is here to make your shopping
+              experience seamless and enjoyable.
+            </p>
+            <p>
+              We are committed to sustainability and sourcing materials
+              responsibly, ensuring that our products not only look good but
+              also feel good to buy.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <h1>Meet Our Team</h1>
+            <p>
+              Our team is passionate about shoes and dedicated to providing the
+              best customer experience. From our sales associates to our
+              designers, each team member brings their unique skills and
+              expertise to KICKS.
+            </p>
+            <p>
+              We believe in continuous innovation and are always looking for
+              ways to improve our products and services to better serve our
+              customers.
+            </p>
+          </div>
+          <div class="col-2">
+            <img src="images/file.png" alt="Our Team" width="70%" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-----------------------------footer--------------->
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col-1">
+            <img src="images/logo2.png" />
+            <p>Step up your shoe game at KICKS!!!</p>
+          </div>
+          <div class="footer-col-2">
+            <h3>Follow us</h3>
+            <ul>
+              <li>Facebook</li>
+              <li>Twitter</li>
+              <li>Instagram</li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <p class="copyright">© 2024 KICKS STORE</p>
+      </div>
+    </div>
+
+    <!-------------------------Javascript for toggle menu----------------->
+    <script>
+      var MenuItems = document.getElementById("MenuItems");
+      MenuItems.style.maxHeight = "0px";
+
+      function menutoggle() {
+        if (MenuItems.style.maxHeight == "0px") {
+          MenuItems.style.maxHeight = "200px";
+        } else {
+          MenuItems.style.maxHeight = "0px";
+        }
+      }
+    </script>
+  </body>
+</html>
